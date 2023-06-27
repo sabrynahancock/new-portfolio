@@ -1,0 +1,437 @@
+html, body {
+  background-color: #47604b; 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Add this line to hide horizontal overflow */
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the navbar links horizontally */
+  padding: 0 20px;
+  z-index: 999;
+}
+
+.brand {
+  font-size: 24px;
+  color: #201e1e;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Align navbar links and icons vertically in the center */
+  flex-grow: 1; /* Expand to fill the remaining space */
+  justify-content: center; /* Center the navbar links horizontally */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.navbar-links a {
+  font-size: 20px; /* Adjust the font size to make the links bigger */
+  transition: color 0.3s ease; /* Add transition for smooth color change */
+  color: white; /* Set the default color of the links */
+  text-decoration: none; /* Remove underline from the links */
+}
+
+.navbar-links a:hover {
+  color: #efefef; /* Set the color of the links on hover */
+  transform: scale(1.2); /* Scale up the size of the links on hover */
+}
+
+/* Media query for screens with max width 767px (mobile devices) */
+@media (max-width: 767px) {
+  .navbar {
+    height: auto; /* Allow the navbar height to adjust based on content */
+    flex-direction: column; /* Stack the elements vertically */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .navbar-content {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center the elements vertically */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack the links vertically */
+    align-items: center; /* Center the links horizontally */
+    margin-top: 20px; /* Add margin at the top for better spacing */
+  }
+
+  .navbar-links a {
+    margin: 10px 0; /* Add margin for spacing between the links */
+  }
+
+  .navbar-icons {
+    margin-top: 20px; /* Add margin at the top for better spacing */
+  }
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end; /* Align the icons to the right */
+  margin-right: 30px;
+}
+
+.navbar-icons a {
+  color: #ffffff; /* Set the color of the icons */
+  font-size: 24px; /* Adjust the font size to make the icons bigger */
+  transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.navbar-icons a:hover {
+  color: #f3f1f1; /* Set the color of the icons on hover */
+  transform: scale(1.2); /* Scale up the size of the icons on hover */
+}
+
+
+.profile-section {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #5f8060;
+}
+
+.profile-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
+}
+.profile-gif {
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.profile-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.profile-section .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-section .location-icon {
+  margin-right: 10px;
+  color: #fffafa;
+}
+
+.profile-section .location span {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.profile-section .scroll-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-image: linear-gradient(to right, #8aaf85, #749f7d);
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 25px; /* Set border-radius to half of the button height */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: -10px; /* Adjust the value to move the button up */
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-section .scroll-button:hover {
+  background-color: #5c7f5e;
+  transform: scale(1.05);
+}
+
+.profile-section .scroll-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(85, 85, 85, 0.4);
+}
+
+
+
+
+
+.project-section {
+  padding: 40px 0;
+  text-align: center;
+  
+}
+.project-section h2 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
+}
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+}
+
+.project-card {
+  background-color: #88ac82;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.project-card p {
+  font-family: 'Roboto', sans-serif; /* Change the font family */
+  margin-bottom: 10px;
+  color: #0a0a0a;
+  text-shadow: 2px 2px 4px rgba(241, 233, 233, 0.3);
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #515f4f, #546257);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px; /* Set border-radius to half of the button height */
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #333333;
+}
+
+
+
+.carousel {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.carousel .carousel-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .carousel-slider .control-dots {
+  display: none;
+}
+
+.carousel .carousel-slide {
+  padding: 0 10px;
+}
+
+.carousel-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-icon {
+  margin: 0 5px; /* Adjust the margin as desired */
+  color: rgb(215, 215, 215);
+}
+
+
+
+
+
+.about-me-image {
+  width: 300px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin: 20px auto; /* Center the image and add some margin */
+}
+
+
+
+.footer {
+  background-color: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-media-links a {
+  margin: 0 10px;
+  color: #f4f4f4; /* Set the color of the icons */
+  font-size: 28px; /* Adjust the font size to make the icons bigger */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-media-links a:not(:last-child) {
+  margin-right: 20px; /* Add separation between the icons */
+}
+
+.social-media-links a:hover {
+  transform: scale(1.2); /* Add a scale effect on hover */
+}
+
+
+
+.sobrenos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.texto {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 800px; /* Add this line to limit the width of the text */
+  margin-left: auto; /* Add this line to center the text horizontally */
+  margin-right: auto; /* Add this line to center the text horizontally */
+}
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  background-color: #6d866a;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.carousel-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-section h2 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.carousel .control-dots {
+  display: none !important;
+}
+
+.custom-dot-list {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  .carousel-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+.button {
+  background-image: linear-gradient(to right, #8aaf85, #749f7d);
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Set border-radius to half of the button height */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-image: linear-gradient(to right, #64836a, #4e7563);
+}
