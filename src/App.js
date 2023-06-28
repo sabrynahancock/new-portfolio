@@ -150,7 +150,7 @@ function App() {
 
               <div className="carousel-card">
                 <img src="https://i.imgur.com/2Kqfe0K.jpeg" alt="Card 3" />
-                <h3>After work you can find me playing OW2 or Hogwards Legacy.</h3>
+                <h3>After work you can find me playing OW2 or Hogwarts Legacy.</h3>
 
               </div>
               <div className="carousel-card">

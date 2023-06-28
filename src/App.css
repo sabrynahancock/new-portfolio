@@ -13,14 +13,15 @@ html, body {
 }
 
 .navbar {
+
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the navbar links horizontally */
+  justify-content: space-between;
   padding: 0 20px;
   z-index: 999;
 }
@@ -43,72 +44,80 @@ html, body {
 .navbar-links {
   display: flex;
   gap: 20px;
-  align-items: center; /* Align navbar links and icons vertically in the center */
-  flex-grow: 1; /* Expand to fill the remaining space */
-  justify-content: center; /* Center the navbar links horizontally */
+  align-items: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
 .navbar-links a {
-  font-size: 20px; /* Adjust the font size to make the links bigger */
-  transition: color 0.3s ease; /* Add transition for smooth color change */
-  color: white; /* Set the default color of the links */
-  text-decoration: none; /* Remove underline from the links */
+  font-size: 20px;
+  transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar-links a:hover {
-  color: #efefef; /* Set the color of the links on hover */
-  transform: scale(1.2); /* Scale up the size of the links on hover */
-}
-
-/* Media query for screens with max width 767px (mobile devices) */
-@media (max-width: 767px) {
-  .navbar {
-    height: auto; /* Allow the navbar height to adjust based on content */
-    flex-direction: column; /* Stack the elements vertically */
-    padding: 20px; /* Add padding for better spacing */
-  }
-
-  .navbar-content {
-    flex-direction: column; /* Stack the elements vertically */
-    align-items: center; /* Center the elements vertically */
-  }
-
-  .navbar-links {
-    flex-direction: column; /* Stack the links vertically */
-    align-items: center; /* Center the links horizontally */
-    margin-top: 20px; /* Add margin at the top for better spacing */
-  }
-
-  .navbar-links a {
-    margin: 10px 0; /* Add margin for spacing between the links */
-  }
-
-  .navbar-icons {
-    margin-top: 20px; /* Add margin at the top for better spacing */
-  }
+  color: #efefef;
+  transform: scale(1.2);
 }
 
 .navbar-icons {
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: flex-end; /* Align the icons to the right */
+  justify-content: flex-end;
   margin-right: 30px;
 }
 
 .navbar-icons a {
-  color: #ffffff; /* Set the color of the icons */
-  font-size: 24px; /* Adjust the font size to make the icons bigger */
-  transition: color 0.3s ease; /* Add transition for smooth color change */
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s ease;
 }
 
 .navbar-icons a:hover {
-  color: #f3f1f1; /* Set the color of the icons on hover */
-  transform: scale(1.2); /* Scale up the size of the icons on hover */
+  color: #f3f1f1;
+  transform: scale(1.2);
 }
+
+/* Media query for screens with max width 767px (mobile devices) */
+@media (max-width: 767px) {
+  .navbar {
+    height: auto;
+    padding: 10px 10px; /* Adjust the padding for better spacing */
+  }
+
+  .navbar-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links {
+    margin-right: 10px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .navbar-links a {
+    margin: 0 0px; /* Adjust the horizontal margin for spacing between the links */
+    font-size: 14px; /* Adjust the font size for smaller links */
+  }
+
+  .navbar-icons {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .navbar-icons a {
+    font-size: 24px;
+  }
+}
+
+
+
+
 
 
 .profile-section {
