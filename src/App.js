@@ -81,7 +81,7 @@ function App() {
           <h2>Software Engineer</h2>
           <div className="location">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-            <span>Wheeling, WV</span>
+            <span>Pittsburgh, PA</span>
           </div>
           <ScrollLink to="sobrenos" smooth={true} duration={500}>
             <button className="scroll-button">Why should you hire me?</button>
