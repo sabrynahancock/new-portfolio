@@ -1,5 +1,5 @@
 html, body {
-  background-color: #47604b; 
+  background-color: #000000; 
   height: 100%;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ html, body {
 .navbar-links a {
   font-size: 20px;
   transition: color 0.3s ease;
-  color: white;
+  color: #FF00A9;
   text-decoration: none;
 }
 
@@ -71,9 +71,11 @@ html, body {
 }
 
 .navbar-icons a {
-  color: #ffffff;
+  color: #FF00A9;
   font-size: 24px;
   transition: color 0.3s ease;
+  
+  
 }
 
 .navbar-icons a:hover {
@@ -123,16 +125,19 @@ html, body {
 .profile-section {
   text-align: center;
   padding: 60px 0;
-  background-color: #5f8060;
+  background-color: #000000;
 }
-
 .profile-section h1 {
   font-size: 48px;
   margin-bottom: 10px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  
+  color: transparent;
+  background: linear-gradient(90deg, #FF00A9, #FF6BF2); /* Adjust the ending color for a neon effect */
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 10px #FF00A9, 0 0 20px #FF00A9; /* Add a neon glow effect with text-shadow */
 }
+
+
 .profile-gif {
   width: 200px; /* Adjust the width as needed */
   height: auto;
@@ -143,8 +148,8 @@ html, body {
 .profile-section h2 {
   font-size: 30px;
   margin-bottom: 10px;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #aaff00;
+  text-shadow: 0 0 10px #aaff00, 0 0 20px #aaff00; /* Add a neon glow effect with text-shadow */
 }
 .profile-section .location {
   display: flex;
@@ -166,7 +171,7 @@ html, body {
 .profile-section .scroll-button {
   display: inline-block;
   padding: 15px 30px;
-  background-image: linear-gradient(to right, #8aaf85, #749f7d);
+  background-image: linear-gradient(to right, #ff12cc, #4ffeef);
   color: white;
   font-size: 20px;
   text-decoration: none;
@@ -201,8 +206,11 @@ html, body {
 }
 .project-section h2 {
   font-size: 40px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  background: linear-gradient(90deg, #FF00A9, #FF6BF2); /* Adjust the ending color for a neon effect */
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 10px #FF00A9, 0 0 20px #FF00A9; /* Add a neon glow effect with text-shadow */
   
 }
 .project-cards {
@@ -212,7 +220,7 @@ html, body {
 }
 
 .project-card {
-  background-color: #88ac82;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   transition: transform 0.3s ease;
@@ -291,7 +299,7 @@ html, body {
 
 .carousel-icon {
   margin: 0 5px; /* Adjust the margin as desired */
-  color: rgb(215, 215, 215);
+  color: rgb(236, 13, 151);
 }
 
 
@@ -380,7 +388,7 @@ html, body {
   text-align: center;
   height: 400px;
   width: 300px;
-  background-color: #6d866a;
+  background-color: #FF00A9;
   border-radius: 8px;
   padding: 20px;
   margin: 0 auto;
